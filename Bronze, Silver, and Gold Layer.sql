@@ -1,8 +1,9 @@
+-- Bronze layer -- 
 CREATE OR REFRESH STREAMING LIVE TABLE delta_guide_bronze
 COMMENT 'Collect the grading data'
 AS SELECT * FROM cloud_files("/FileStore/grading_data_raw", "csv", map("cloudFiles.inferColumnTypes", "true"))
 
-
+-- Silver layer -- 
 CREATE OR REFRESH LIVE TABLE delta_guide_silver(
   CONSTRAINT sufficient_response EXPECT (student_grade IS NOT NULL and student_result IS NOT NULL) ON VIOLATION DROP ROW
 )
@@ -14,7 +15,7 @@ FROM
 ORDER BY
   student_grade DESC;
 
-
+-- Gold layer -- 
 CREATE LIVE TABLE delta_guide_gold
 COMMENT 'Drop some columns and only include rows of students who passed'
 AS SELECT 
