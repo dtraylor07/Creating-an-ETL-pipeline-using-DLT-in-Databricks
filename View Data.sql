@@ -7,7 +7,7 @@ SELECT * FROM delta_guide_bronze
 -- See data attributes of bronze layer table -- 
 DESCRIBE delta_guide_bronze
 
--- View silver layer data table --
+-- View silver layer table --
 SELECT * FROM delta_guide_silver
 
 -- Change ordering of grades in silver layer table -- 
