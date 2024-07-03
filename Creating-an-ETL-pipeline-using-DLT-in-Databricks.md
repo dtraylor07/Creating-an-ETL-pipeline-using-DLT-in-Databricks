@@ -1,3 +1,0 @@
-This code repository contains sample code for users to create a data pipeline using Delta Live Tables in Databricks. The code utlizes the medallion architecture with a bronze layer, silver layer, and gold layer. The code sample also contains basic sql commands that users would use to view all of their data and see the different transformations happening from layer to layer. 
-
-To get the best use out of this code, users should have an understanding of working with SQL and Databricks notebooks. Users must already have a Databricks Workspace up and running with permissions to create a cluster. Users must also have permissions to save data to the DBFS or cloud object storage. 
