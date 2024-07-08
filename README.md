@@ -1,3 +1,3 @@
 This code repository contains sample code for users to create an ETL pipeline using Delta Live Tables in Databricks. The code utilizes the medallion architecture with a bronze layer, silver layer, and gold layer. The code also provides basic sql commands that users can use to view their data and see the different transformations from layer to layer. 
 
-Before working with this code, it is important for users to understand the SQL language and how to use Databricks notebooks. Users must already have a Workspace up and running in Databricks with permissions to create a cluster. Users must also have permissions to save data to the DBFS or cloud object storage. 
+Before working with this code, it is important for users to understand the SQL language and how to use Databricks notebooks. Users must already have a Workspace up and running in Databricks with permissions to create a cluster. Users must also have permissions to save data to the DBFS (Databricks File System). 
